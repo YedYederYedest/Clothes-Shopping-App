@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing Store App</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>YedYederYedest's Clothing Shop</h1>
+        <h2>Find Something Special</h2>
+    </header>
+    
+    <main>
+        <!-- Menu -->
+        <section class="menu" id="menu"></section>
+
+        <!-- Cart -->
+        <section class="cart" id="cart">
+            <h1>Your Order</h1>
+            <ul class="cart-user-order" id="cart-user-order"></ul>
+            <div class="cart-user-total">
+                <h2>Total Price:</h2>
+                <h2 id="cart-user-total-amount">$0</h2>
+            </div>
+            <!-- Complete Order Button -->
+            <button class="cart-completeOrderBtn" id="cart-completeOrderBtn">Complete Order</button>
+        </section>
+
+        <!-- Payment Modal -->
+        <section class="pay" id="pay">
+            <form id="pay-modal">
+                <button type="button" class="closeModal" id="closeModal">X</button>
+                <h2>Enter Your Card Details</h2>
+                <input type="text" placeholder="Enter Your Name" id="customerName" name="customerName" required>
+                <input type="number" placeholder="Enter Your Card Details" required>
+                <input type="number" placeholder="Enter Your Debit Card Number" required>
+                <button type="submit" class="payBtn" id="payBtn">Pay</button>
+            </form>
+        </section>
+
+        <!-- Order Confirmation -->
+        <section class="orderMessage" id="orderMessage">
+            <h2 id="orderMessage-paid">Thank you! Your order is on its way!</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p><span id="yearUpdate"></span> YedYederYedest Software</p>
+    </footer>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>

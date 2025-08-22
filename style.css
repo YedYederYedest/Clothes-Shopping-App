@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    margin: auto;
+    padding: 0;
+    font-family: "Bungee", sans-serif;
+    background-color: #1E1E1E;
+    color: #F5F5F5;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-top: 0;
+    transition: 500ms;
+}
+
+h1:hover {
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    font-size: 2.5em;
+}
+
+header {
+    width: 100%;
+    text-align: left;
+    background: url(images/HeaderBackground.jpg) no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    color: #FFFFFF;
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.8);
+    padding: 15px 50px 30px;
+    box-sizing: border-box;
+}
+
+main {
+    margin: 10px 80px;
+    padding: 50px;
+    background-color: #2A2A2A;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
+
+.emoji {
+    font-size: 8em;
+}
+
+.menuOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px 0;
+    width: 100%;
+    border-bottom: #3D3D3D 1px solid;
+}
+
+.addButton {
+    background: none;
+    border: 1px solid #EAB308;
+    border-radius: 50%;
+    padding: 15px 20px;
+    font-size: 25px;
+    font-weight: lighter;
+    font-family: sans-serif;
+    color: #EAB308;
+    transition: 500ms;
+}
+
+.addButton:hover {
+    cursor: pointer;
+    color: #1E1E1E;
+    background-color: #EAB308;
+    box-shadow: 0px 0px 15px #FACC15;
+}
+
+.cart {
+    background-color: #2A2A2A;
+    padding: 20px;
+    margin: 30px auto 0 auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.5);
+    text-align: left;
+    max-width: 500px;
+    display: none;
+}
+
+.cart h1 {
+    font-size: 1.5em;
+    margin: 0 0 15px 0;
+    border-bottom: 2px solid #3D3D3D;
+    padding-bottom: 10px;
+}
+
+.cart-user-order li {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    list-style: none;
+}
+
+.removeButton {
+    color: #9CA3AF;
+    font-size: 0.8em;
+    margin-left: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: color 0.3s;
+}
+
+.removeButton:hover {
+    color: #EF4444;
+}
+
+.cart-user-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 2px solid #3D3D3D;
+}
+
+.cart-completeOrderBtn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #EAB308;
+    color: #1E1E1E;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.cart-completeOrderBtn:hover {
+    background-color: #CA8A04;
+    box-shadow: 0px 0px 12px #FACC15;
+}
+
+/* Payment Popup Modal */
+.pay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#pay-modal {
+    background-color: #2A2A2A;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.6);
+    width: 350px;
+    text-align: center;
+    position: relative;
+}
+
+.closeModal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #9CA3AF;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.closeModal:hover {
+    color: #EF4444;
+}
+
+#pay-modal h2 {
+    margin-bottom: 15px;
+}
+
+#pay-modal input {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #3D3D3D;
+    font-size: 1em;
+    background-color: #1E1E1E;
+    color: #F5F5F5;
+}
+
+#pay-modal input:focus {
+    outline: 2px solid #EAB308;
+}
+
+.payBtn {
+    background-color: #EAB308;
+    color: #1E1E1E;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.payBtn:hover {
+    background-color: #CA8A04;
+    box-shadow: 0px 0px 10px #FACC15;
+}
+
+.orderMessage {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #2A2A2A;
+    border-radius: 8px;
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    display: none;
+}
