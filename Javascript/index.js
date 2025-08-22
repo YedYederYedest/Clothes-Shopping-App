@@ -1,4 +1,4 @@
-import { clothesArray } from "data.js";
+import { clothesArray } from "./data.js";
 
 const paymentDiv = document.getElementById("pay");
 const cartHTML = document.getElementById("cart");
